@@ -1,0 +1,47 @@
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+// Pages
+@import "./pages/home";
+// Components
+@import "./components/buttons";
+@import "./components/composition";
+@import "./components/feature_box";
+@import "./components/card";
+@import "./components/story";
+@import "./components/video_background";
+// Layout
+@import "./layout/grid";
+
+/* Prevents a browser from adding margin & padding to elements */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* This prevents padding and borders being added to the elements specified height/width */
+  box-sizing: border-box;
+}
+
+/* Root Font Size for rem Responsiveness */
+html {
+  /* Some users will increase the default font-size of their browser */
+  /* This is a responsive way to account for these users instead of hardcoding 10px */
+  font-size: 62.5%;
+}
+
+/* Better to specify font universals inside the body tag */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  /* This gives the website the white border */
+  padding: 3rem;
+}

@@ -1,0 +1,96 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 5rem;
+    /* The transition CSS property is a shorthand property for transition-property, 
+        transition-duration, transition-timing-function, and transition-delay. */
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    /* A box shadow is described by X and Y offsets relative to the element, blur and spread 
+        radius, and color. */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  /* On Click */
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  /* ::after creates a pseudo-element that is the last child of the selected element. 
+      It is often used to add cosmetic content to an element with the content property. 
+      It is inline by default. */
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  /* After pseudo element on hover state */
+  &:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  &::after {
+    background-color: #fff;
+  }
+}
+
+.btn-green {
+  background-color: $color-primary;
+  color: $color-white;
+  &::after {
+    background-color: $color-primary;
+  }
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  /* Automatically applies the styles defined in moveInBottom (e.g. opacity 0) 
+    before the animation starts */
+  animation-fill-mode: backwards;
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
+  }
+}
