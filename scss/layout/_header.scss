@@ -8,14 +8,16 @@
     url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-  
-  // @include responsive(phone) {
-    @include responsive(tablet_portrait) {
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
+  @supports (clip-path: polygon(0 0)) {
+    /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  position: relative;
+
+  // @include responsive(phone) {
+  @include responsive(tablet_portrait) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
 }
 
@@ -67,6 +69,6 @@
   animation: moveInRight 1s ease-out;
   @include responsive(phone) {
     letter-spacing: 1rem;
-    font-size: 1.5rem;;
+    font-size: 1.5rem;
   }
 }

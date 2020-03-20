@@ -72,11 +72,11 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .about-section {
       margin-top: -15vh !important;
       padding: 20rem 0; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .about-section {
       margin-top: -10vh !important; } }
 
@@ -91,7 +91,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .secondary-heading {
       font-size: 2rem;
       letter-spacing: normal; } }
@@ -111,7 +111,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   margin-top: -10rem; }
   .features > * {
     transform: skewY(5deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .features {
       padding: 10rem 0; } }
 
@@ -119,21 +119,21 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .tours {
       padding: 20rem 0 10rem 0; } }
 
 .stories {
   padding: 15rem 0;
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .stories {
       padding: 10rem 0; } }
 
 .booking {
   padding: 15rem 5rem;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .booking {
       padding: 5rem 0; } }
 
@@ -142,14 +142,14 @@ control over the intermediate steps of the animation sequence than transitions. 
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   background-size: cover; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .booking-form-container {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 50%), url(../../img/nat-10.jpg); } }
 
 .booking-form {
   width: 50%;
   padding: 6rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .booking-form {
       width: 65%; } }
 
@@ -233,7 +233,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   position: relative; }
   .composition:hover .composition-photo:not(:hover) {
     transform: scale(0.95); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition {
       margin-top: 4rem; } }
 
@@ -244,7 +244,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   position: absolute;
   transition: all 0.2s;
   outline-offset: 1rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition-photo {
       float: left;
       position: relative;
@@ -259,7 +259,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   left: 0;
   top: -2rem;
   z-index: 1; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition-photo-p1 {
       top: 0;
       transform: scale(1.2); } }
@@ -268,7 +268,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   right: 0;
   top: 2rem;
   z-index: 1; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition-photo-p2 {
       top: 0;
       transform: scale(1.3);
@@ -278,7 +278,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   left: 20%;
   top: 10rem;
   z-index: 1; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition-photo-p3 {
       top: 0;
       left: 0;
@@ -292,7 +292,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       margin-bottom: 3.5rem; } }
   .feature-box:hover {
@@ -400,7 +400,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   .card .card-price-value {
     font-size: 6rem;
     font-weight: 100; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .card {
       height: auto; }
       .card .card-face {
@@ -450,7 +450,7 @@ control over the intermediate steps of the animation sequence than transitions. 
         font-size: 4rem;
         font-weight: 500; } }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .custom-card {
     margin-bottom: 6.5rem; } }
 
@@ -461,7 +461,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem 6rem 6rem 9rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       width: 100%;
       padding: 4rem; } }
@@ -550,12 +550,12 @@ control over the intermediate steps of the animation sequence than transitions. 
 .row {
   max-width: 114rem;
   margin: 0 auto; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
   .row::after {
@@ -566,10 +566,10 @@ control over the intermediate steps of the animation sequence than transitions. 
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0 !important; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -590,10 +590,12 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-  @media (max-width: 56.25em) {
+  @supports (clip-path: polygon(0 0)) {
+    .header {
+      /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
+  @media only screen and (max-width: 56.25em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
 
@@ -624,7 +626,7 @@ control over the intermediate steps of the animation sequence than transitions. 
     animation-iteration-count: 4;
     animation-timing-function: ease | ease-in | ease-out, etc...
   */ }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .primary-heading-main {
       font-size: 4.5rem;
       letter-spacing: 1rem; } }
@@ -639,7 +641,7 @@ control over the intermediate steps of the animation sequence than transitions. 
       animation-timing-function: ease-out; */
   /* Short-Hand Syntax */
   animation: moveInRight 1s ease-out; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .primary-heading-secondary {
       letter-spacing: 1rem;
       font-size: 1.5rem; } }
@@ -648,14 +650,14 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
 
 .footer-logo-container {
   text-align: center;
   margin-bottom: 8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer-logo-container {
       margin-bottom: 4rem; } }
 
@@ -667,7 +669,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   border-top: 1px solid #55c57a;
   padding-top: 2rem;
   display: inline-block; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer-navigation {
       width: 100%;
       text-align: center;
@@ -697,7 +699,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   padding-top: 2rem;
   width: 80%;
   float: right; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer-copyright {
       width: 100%;
       float: none; } }
@@ -732,10 +734,10 @@ control over the intermediate steps of the animation sequence than transitions. 
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation-btn {
-      top: 2.5rem;
-      right: 2.5rem; } }
+      top: 2rem;
+      right: 2rem; } }
 
 .navigation-background {
   height: 6rem;
@@ -747,7 +749,7 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation-background {
       top: 2.5rem;
       right: 2.5rem; } }
@@ -823,16 +825,16 @@ html {
   /* Some users will increase the default font-size of their browser */
   /* This is a responsive way to account for these users instead of hardcoding 10px */
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 70%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 60%; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 80%; } }
 
@@ -845,6 +847,6 @@ body {
   color: #777;
   /* This gives the website the white border */
   padding: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
