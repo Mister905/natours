@@ -2,10 +2,17 @@
   // The max-width property defines the maximum width of an element
   // Setting the width of a block-level element will prevent it from stretching out to the edges of its container to the left and right. Then, you can set the left and right margins to auto to horizontally center that element within its container. The element will take up the width you specify, then the remaining space will be split evenly between the two margins.
   max-width: 114rem;
-  // background-color: #eee;
   margin: 0 auto;
+
+  @include responsive(tablet_portrait) {
+    max-width: 50rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include responsive(tablet_portrait) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -18,6 +25,14 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive(tablet_portrait) {
+        margin-right: 0 !important;
+      }
+    }
+
+    @include responsive(tablet_portrait) {
+      width: 100% !important;
     }
   }
 

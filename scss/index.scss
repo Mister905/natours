@@ -3,7 +3,6 @@
 @import "./abstracts/variables";
 
 @import "./base/animations";
-@import "./base/base";
 @import "./base/typography";
 @import "./base/utilities";
 // Pages
@@ -16,8 +15,12 @@
 @import "./components/story";
 @import "./components/video_background";
 @import "./components/form";
+
 // Layout
 @import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/navigation";
 
 /* Prevents a browser from adding margin & padding to elements */
 *,
@@ -33,7 +36,24 @@
 html {
   /* Some users will increase the default font-size of their browser */
   /* This is a responsive way to account for these users instead of hardcoding 10px */
+  // Largest to Smallest Order is Important or Multiple Max-Width Queries will Apply
   font-size: 62.5%;
+
+  @include responsive(tablet_landscape) {
+    font-size: 70%;
+  }
+
+  @include responsive(tablet_portrait) {
+    font-size: 60%;
+  }
+
+  @include responsive(phone) {
+    font-size: 50%;
+  }
+
+  @include responsive(large_desktop) {
+    font-size: 80%;
+  }
 }
 
 /* Better to specify font universals inside the body tag */
@@ -45,4 +65,8 @@ body {
   color: $color-gray-dark;
   /* This gives the website the white border */
   padding: 3rem;
+
+  @include responsive(tablet_portrait) {
+    padding: 0;
+  }
 }

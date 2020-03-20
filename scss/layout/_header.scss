@@ -1,0 +1,72 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  
+  // @include responsive(phone) {
+    @include responsive(tablet_portrait) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+  }
+}
+
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.logo {
+  height: 3.5rem;
+}
+
+.primary-heading {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.primary-heading-main {
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* 
+    Other useful animation properties 
+    animation-delay: 3s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease | ease-in | ease-out, etc...
+  */
+  @include responsive(phone) {
+    font-size: 4.5rem;
+    letter-spacing: 1rem;
+  }
+}
+
+.primary-heading-secondary {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  /* animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; */
+  /* Short-Hand Syntax */
+  animation: moveInRight 1s ease-out;
+  @include responsive(phone) {
+    letter-spacing: 1rem;
+    font-size: 1.5rem;;
+  }
+}

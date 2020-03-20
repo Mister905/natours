@@ -16,6 +16,34 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+
+    <div class="navigation-container">
+      <input id="navigation-toggle" type="checkbox" class="navigation-checkbox">
+      <label for="navigation-toggle" class="navigation-btn">
+        <span class="navigation-icon">&nbsp;</span>
+      </label>
+      <div class="navigation-background">&nbsp;</div>
+      <nav class="navigation">
+        <ul class="navigation-ui">
+          <li class="navigation-li">
+            <a href="#" class="navigation-link">About Natours</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#" class="navigation-link">Your Benefits</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#" class="navigation-link">Popular Tours</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#" class="navigation-link">Stories</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#" class="navigation-link">Book Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="logo-box">
         <img src="./img/logo-white.png" alt="Logo" class="logo" />
@@ -150,7 +178,7 @@
         </div>
         <div class="row">
           <div class="col-1-of-3">
-            <div class="card">
+            <div class="card custom-card">
               <div class="card-face card-face-front">
                 <div class="card-image card-image-1"></div>
                 <h4 class="card-heading">
@@ -181,7 +209,7 @@
             </div>
           </div>
           <div class="col-1-of-3">
-            <div class="card">
+            <div class="card custom-card">
               <div class="card-face card-face-front">
                 <div class="card-image card-image-2"></div>
                 <h4 class="card-heading">
@@ -212,7 +240,7 @@
             </div>
           </div>
           <div class="col-1-of-3">
-            <div class="card">
+            <div class="card custom-card">
               <div class="card-face card-face-front">
                 <div class="card-image card-image-3"></div>
                 <h4 class="card-heading">
@@ -328,11 +356,47 @@
                     <input id="email" name="email" type="email" class="form-input" placeholder="Email" required>
                     <label for="email" class="form-label">Email</label>
                   </div>
+                  <div class="form-group">
+                    <a href="#" class="btn btn-green">Book Today!</a>
+                </div>
                 </form>
               </div>
           </div>
         </div>
       </section>
     </main>
+    <section class="footer">
+      <div class="footer-logo-container">
+        <img class="footer-logo" src="./img/logo-green-2x.png" alt="Footer Logo">
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer-navigation">
+            <ul class="footer-navigation-ul">
+              <li class="footer-navigation-li">
+                  <a href="#" class="footer-navigation-link">Company</a>
+                </li>
+                <li class="footer-navigation-li">
+                  <a href="#" class="footer-navigation-link">Contact Us</a>
+                </li>
+                <li class="footer-navigation-li">
+                  <a href="#" class="footer-navigation-link">Careers</a>
+                </li>
+                <li class="footer-navigation-li">
+                  <a href="#" class="footer-navigation-link">Privacy</a>
+                </li>
+                <li class="footer-navigation-li">
+                  <a href="#" class="footer-navigation-link">Terms</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer-copyright">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ea esse? Velit non ab reprehenderit at nulla molestiae, adipisci iste illum consectetur, earum officia dolore id esse aspernatur numquam architecto.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

@@ -1,3 +1,15 @@
+/* 
+MEDIA QUERY MANAGER
+0px - 600px         Phone
+600px - 900px       Tablet Portrait
+900px - 1200px      Tablet Landscape
+1200px - 1800px     Normal Styles Applied
+1800px -            Big Desktop  
+
+em is the optimal unit for responsive breakpoints
+1em = 16px
+divide the units by 16 e.g. 600px / 16px = 37.5em
+*/
 /* The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by 
 defining styles for keyframes (or waypoints) along the animation sequence. This gives more 
 control over the intermediate steps of the animation sequence than transitions. */
@@ -46,53 +58,6 @@ control over the intermediate steps of the animation sequence than transitions. 
 .mb-sm {
   margin-bottom: 1.5rem; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-.logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.logo {
-  height: 3.5rem; }
-
-.primary-heading {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-
-.primary-heading-main {
-  display: block;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* Other useful animation properties 
-      animation-delay: 3s;
-      animation-iteration-count: 4;
-      animation-timing-function: ease | ease-in | ease-out, etc...
-    */ }
-
-.primary-heading-secondary {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  /* animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; */
-  /* Short-Hand Syntax */
-  animation: moveInRight 1s ease-out; }
-
 .centered-text-box {
   /* These values are relative to the element's parent (header) */
   position: absolute;
@@ -107,6 +72,13 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .about-section {
+      margin-top: -15vh !important;
+      padding: 20rem 0; } }
+  @media (max-width: 56.25em) {
+    .about-section {
+      margin-top: -10vh !important; } }
 
 .secondary-heading {
   font-size: 3.5rem;
@@ -119,6 +91,10 @@ control over the intermediate steps of the animation sequence than transitions. 
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s; }
+  @media (max-width: 37.5em) {
+    .secondary-heading {
+      font-size: 2rem;
+      letter-spacing: normal; } }
   .secondary-heading:hover {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
@@ -135,30 +111,47 @@ control over the intermediate steps of the animation sequence than transitions. 
   margin-top: -10rem; }
   .features > * {
     transform: skewY(5deg); }
+  @media (max-width: 56.25em) {
+    .features {
+      padding: 10rem 0; } }
 
 .tours {
   background-color: #f7f7f7;
-  padding: 15rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+  @media (max-width: 56.25em) {
+    .tours {
+      padding: 20rem 0 10rem 0; } }
 
 .stories {
   padding: 15rem 0;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .stories {
+      padding: 10rem 0; } }
 
 .booking {
-  padding: 15rem 0;
+  padding: 15rem 5rem;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  @media (max-width: 56.25em) {
+    .booking {
+      padding: 5rem 0; } }
 
 .booking-form-container {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/nat-10.jpg);
-  background-size: 100%;
-  height: 50rem;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  background-size: cover; }
+  @media (max-width: 56.25em) {
+    .booking-form-container {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 50%), url(../../img/nat-10.jpg); } }
 
 .booking-form {
   width: 50%;
   padding: 6rem; }
+  @media (max-width: 56.25em) {
+    .booking-form {
+      width: 65%; } }
 
 .btn {
   /* On Click */
@@ -240,6 +233,9 @@ control over the intermediate steps of the animation sequence than transitions. 
   position: relative; }
   .composition:hover .composition-photo:not(:hover) {
     transform: scale(0.95); }
+  @media (max-width: 56.25em) {
+    .composition {
+      margin-top: 4rem; } }
 
 .composition-photo {
   width: 55%;
@@ -248,6 +244,11 @@ control over the intermediate steps of the animation sequence than transitions. 
   position: absolute;
   transition: all 0.2s;
   outline-offset: 1rem; }
+  @media (max-width: 56.25em) {
+    .composition-photo {
+      float: left;
+      position: relative;
+      width: 33.33333%; } }
   .composition-photo:hover {
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
@@ -258,16 +259,30 @@ control over the intermediate steps of the animation sequence than transitions. 
   left: 0;
   top: -2rem;
   z-index: 1; }
+  @media (max-width: 56.25em) {
+    .composition-photo-p1 {
+      top: 0;
+      transform: scale(1.2); } }
 
 .composition-photo-p2 {
   right: 0;
   top: 2rem;
   z-index: 1; }
+  @media (max-width: 56.25em) {
+    .composition-photo-p2 {
+      top: 0;
+      transform: scale(1.3);
+      z-index: 100; } }
 
 .composition-photo-p3 {
   left: 20%;
   top: 10rem;
   z-index: 1; }
+  @media (max-width: 56.25em) {
+    .composition-photo-p3 {
+      top: 0;
+      left: 0;
+      transform: scale(1.1); } }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -277,6 +292,9 @@ control over the intermediate steps of the animation sequence than transitions. 
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s; }
+  @media (max-width: 56.25em) {
+    .feature-box {
+      margin-bottom: 3.5rem; } }
   .feature-box:hover {
     transform: translateY(-1.5rem); }
 
@@ -382,6 +400,59 @@ control over the intermediate steps of the animation sequence than transitions. 
   .card .card-price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto; }
+      .card .card-face {
+        height: auto;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        overflow: hidden; }
+      .card .card-face-back {
+        transform: rotateY(0); }
+      .card .card-face-back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card .card-face-back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card .card-face-back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .card:hover .card-face-front {
+        transform: rotateY(0); }
+      .card:hover .card-face-back {
+        transform: rotateY(0); }
+      .card .card-image {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px; }
+      .card .card-action-container {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0);
+        width: 100%;
+        text-align: center; }
+        .card .card-action-container a {
+          margin: 2rem 0 4rem 0 !important; }
+      .card .card-price-container {
+        text-align: center;
+        margin-bottom: 0;
+        color: #fff; }
+      .card .card-price-only {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-top: 2rem; }
+      .card .card-price-value {
+        font-size: 4rem;
+        font-weight: 500; } }
+
+@media (max-width: 56.25em) {
+  .custom-card {
+    margin-bottom: 6.5rem; } }
 
 .story {
   width: 75%;
@@ -390,6 +461,10 @@ control over the intermediate steps of the animation sequence than transitions. 
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem 6rem 6rem 9rem; }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem; } }
   .story:hover .story-image-caption {
     opacity: 1;
     transform: translateY(-50%, -50%); }
@@ -475,8 +550,14 @@ control over the intermediate steps of the animation sequence than transitions. 
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
@@ -485,6 +566,12 @@ control over the intermediate steps of the animation sequence than transitions. 
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0 !important; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -497,6 +584,230 @@ control over the intermediate steps of the animation sequence than transitions. 
     width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  @media (max-width: 56.25em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
+
+.logo {
+  height: 3.5rem; }
+
+.primary-heading {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+
+.primary-heading-main {
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* 
+    Other useful animation properties 
+    animation-delay: 3s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease | ease-in | ease-out, etc...
+  */ }
+  @media (max-width: 37.5em) {
+    .primary-heading-main {
+      font-size: 4.5rem;
+      letter-spacing: 1rem; } }
+
+.primary-heading-secondary {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  /* animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; */
+  /* Short-Hand Syntax */
+  animation: moveInRight 1s ease-out; }
+  @media (max-width: 37.5em) {
+    .primary-heading-secondary {
+      letter-spacing: 1rem;
+      font-size: 1.5rem; } }
+
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
+
+.footer-logo-container {
+  text-align: center;
+  margin-bottom: 8rem; }
+  @media (max-width: 56.25em) {
+    .footer-logo-container {
+      margin-bottom: 4rem; } }
+
+.footer-logo {
+  width: 15rem;
+  height: auto; }
+
+.footer-navigation {
+  border-top: 1px solid #55c57a;
+  padding-top: 2rem;
+  display: inline-block; }
+  @media (max-width: 56.25em) {
+    .footer-navigation {
+      width: 100%;
+      text-align: center;
+      margin: 2rem 0; } }
+
+.footer-navigation-ui {
+  list-style: none; }
+
+.footer-navigation-li {
+  display: inline-block; }
+  .footer-navigation-li:not(:last-child) {
+    margin-right: 1.5rem; }
+
+.footer-navigation-link:link, .footer-navigation-link:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block; }
+
+.footer-navigation-link:hover, .footer-navigation-link:active {
+  color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px); }
+
+.footer-copyright {
+  border-top: 1px solid #55c57a;
+  padding-top: 2rem;
+  width: 80%;
+  float: right; }
+  @media (max-width: 56.25em) {
+    .footer-copyright {
+      width: 100%;
+      float: none; } }
+
+.navigation-checkbox {
+  display: none; }
+  .navigation-checkbox:checked ~ .navigation-background {
+    transform: scale(80); }
+  .navigation-checkbox:checked ~ .navigation {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.5s linear 0.5s, opacity 0.5s;
+    width: 100%; }
+  .navigation-checkbox:checked + .navigation-btn .navigation-icon {
+    background-color: transparent; }
+  .navigation-checkbox:checked + .navigation-btn .navigation-icon:before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation-checkbox:checked + .navigation-btn .navigation-icon:after {
+    top: 0;
+    transform: rotate(-135deg); }
+
+.navigation-btn {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation-btn {
+      top: 2.5rem;
+      right: 2.5rem; } }
+
+.navigation-background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation-background {
+      top: 2.5rem;
+      right: 2.5rem; } }
+
+.navigation {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  visibility: hidden;
+  opacity: 0;
+  width: 0; }
+
+.navigation-ui {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation-li {
+  margin: 1rem; }
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 225%;
+  transition: all 0.4s; }
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem); }
+
+.navigation-icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation-icon, .navigation-icon::before, .navigation-icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #999;
+    display: inline-block; }
+  .navigation-icon::before, .navigation-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.5s; }
+  .navigation-icon::before {
+    top: -0.8rem; }
+  .navigation-icon::after {
+    top: 0.8rem; }
 
 /* Prevents a browser from adding margin & padding to elements */
 *,
@@ -512,6 +823,18 @@ html {
   /* Some users will increase the default font-size of their browser */
   /* This is a responsive way to account for these users instead of hardcoding 10px */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 70%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 /* Better to specify font universals inside the body tag */
 body {
@@ -522,3 +845,6 @@ body {
   color: #777;
   /* This gives the website the white border */
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
